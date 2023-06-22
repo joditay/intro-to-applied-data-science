@@ -111,7 +111,7 @@ list(model1, model2, model3, model4) |>
 
 **Question 3.6**: According to this analysis, what is the main driver of economic growth? Why?
 
-The main driver of economic growth is 
+The main driver of economic growth is education. It has the highest r-squared value, and thus has the highest level of correlation with the growth variable.
 
 **Question 3.7**: In the code chunk below, edit the table such that the cells (including standard errors) corresponding to the variable `treat` have a red background and white text. Make sure to load the `kableExtra` library beforehand.
 
@@ -127,14 +127,8 @@ list(model1, model2, model3, model4) |>
 **Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document. 
 
 ```{r}
-library(officer)
-worddoc <- read_docx()
-worddoc <- worddoc %>%
-  body_add_table(
-    data = #tablename,
-    style = "TableGrid"
-  )
-print(worddoc, target = #docpath in double quotes)
+list(model1, model2, model3, model4) |>
+  modelsummary(stars=T, statistics = c("R-squared", "N"), output = "table.docx") 
 ```
 
 ## The End
