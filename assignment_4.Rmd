@@ -59,7 +59,7 @@ datasummary((mean + median + sd + min + max) ~ (growth+rgdp60) * ((revolutions >
 
 **Designated place**: type one or two sentences describing this table of a fellow student below. For example, comment on the mean and median growth of both groups. Then stage, commit and push it to their github repository. 
 
-On average, countries with 0 revolutions experienced higher growth than countries that had at least 1 revolution. For both groups, the median is less than the mean, so the distribution of growth rates are skewed to the right.
+
 
 ### Part 3: Make a table summarizing reressions using modelsummary and kable
 
